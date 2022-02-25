@@ -15,7 +15,10 @@ sudo ip addr add 10.0.0.1/24 dev eth1
 sudo ip link set up eth1
 ```
 
-## 解析 DHCP 工作过程
+## 报文
+
+
+## 工作流程
 
 ```mermaid
 sequenceDiagram
@@ -75,24 +78,26 @@ S-->>-C: DHCP Ack
 <br/>
 <br/>
 
-## 续租
+### Renew
 > 既然是租用，就有到期的一天。和租房子一样，不能等到合约到期再续租，一般需要提前跟房东说。DHCP也一样，客户端会在租期过去 50% 的时候，向“房东”（租给他 ip 地址的 DHCP Server）发送 DHCP Request 消息包，房东再回复一个 DHCP Ack 包续约成功，如果拒绝续约，则发送 DHCP NAK 包；如果这时房东没有响应，则等到租期 87.5% 时直接广播 DHCP Request 包，后续处理和前面一样；如果到期了还没成功续租，则从新走一遍 Discover 流程
 
 <br/>
 <br/>
 
-## 释放
+### Release
 > 主动和网络断开时，发送 DHCP Release 单播报文
-
-## 重新加入
-> 客户端重新加入已知网络时，直接拿上一次分配的 ip 等信息发送 DHCP Request 报文，服务器会尝试让客户端继续使用之前的 ip 并回复 DHCP Ack 报文；如果此 ip 无法分配，则回复 DHCP NAK 报文，客户端收到后需要发起 DHCP Discover 获取新的 IP
 > ```
 > # macos 用下面命令 release、renew
 > sudo ipconfig set en0 BOOTP
 > sudo ipconfig set en0 DHCP
 > ```
 
+<br/>
+<br/>
+
+### 重新加入
+> 客户端重新加入已知网络时，直接拿上一次分配的 ip 等信息发送 DHCP Request 报文，服务器会尝试让客户端继续使用之前的 ip 并回复 DHCP Ack 报文；如果此 ip 无法分配，则回复 DHCP NAK 报文，客户端收到后需要发起 DHCP Discover 获取新的 IP
 
 ## 问题
 1. 什么情况服务器会拒绝续约
-2. 哪些场景下会主动断开网络
+2. 释放提到的主动断开网络有哪些场景
