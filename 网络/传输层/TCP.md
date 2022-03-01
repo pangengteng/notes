@@ -25,8 +25,15 @@
 ![三次握手](https://static001.geekbang.org/resource/image/c0/08/c067fe62f49e8152368c7be9d91adc08.jpg)
 
 > 过程详解
-> 第一次
-![第一次握手](./images/tcp 第一次握手.png)
+
+> 第一次握手，SYN = 1，seq=3193042259
+![第一次握手](./images/first_handshake.png)
+
+> 第二次握手，SYN, ACK = 1，seq=2807733674，ack=3193042260
+![第二次握手](./images/second_handshake.png)
+
+> 第三次握手，ACK = 1，seq=3193042260，ack=2807733675
+![第二次握手](./images/third_handshake.png)
 
 ## 四次挥手
 
@@ -35,3 +42,7 @@
 
 > 过程详解
 > 
+
+## 问题
+1. 发送方传输数据为什么 ACK = 1
+![传输数据](./images/transfer_data_1.png)
