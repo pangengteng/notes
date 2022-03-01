@@ -17,3 +17,21 @@
 > 3. RST:
 > 4. SYN:
 > 5. FIN:
+
+## 三次握手
+> 为什么是三次
+
+> 状态时序图
+![三次握手](https://static001.geekbang.org/resource/image/c0/08/c067fe62f49e8152368c7be9d91adc08.jpg)
+
+> 过程详解
+> 第一次
+![第一次握手](./images/tcp 第一次握手.png)
+
+## 四次挥手
+
+> 状态时序图
+![四次挥手](https://static001.geekbang.org/resource/image/bf/13/bf1254f85d527c77cc4088a35ac11d13.jpg)
+
+> 过程详解
+> 
