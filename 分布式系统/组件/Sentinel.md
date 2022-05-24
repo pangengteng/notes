@@ -124,26 +124,7 @@ Sentinel 里面的各种种类的统计节点：
 
 3. 进入 slotChain，处理顺序为：solt_1.entry -> solt_1.fireEntry -> solt_2.entry -> solt_2.fireEntry -> ...
 
-4. 进入 NodeSelectorSlot
-![进入 NodeSelectorSlot](./images/entry_nodeSelectorSlot.drawio.png)
-
-离开 slotChain，处理顺序为：
-
 ```java
-/**
-* 使用 SphU（实现类为 CtSphU）定义名为 HelloWorld 的资源，并且获取资源
-*/
-Entry entry = SphU.entry("HelloWorld")
-
-public Entry entry(String name, EntryType type, int count, Object... args) throws BlockException {
-    /**
-        * 使用 StringResourceWrapper 类定义资源，StringResourceWrapper 继承了 ResourceWrapper 类，其重写了 hashcode 和 equals 方法，name是资源的唯一标识
-    */
-    StringResourceWrapper resource = new StringResourceWrapper(name, type);
-    return entry(resource, count, args);
-}
-
-
 private Entry entryWithPriority(ResourceWrapper resourceWrapper, int count, boolean prioritized, Object... args)
     throws BlockException {
     // context 保存在 ThreadLocal 中
@@ -170,3 +151,158 @@ private Entry entryWithPriority(ResourceWrapper resourceWrapper, int count, bool
     return e;
 }
 ```
+
+4. 进入 NodeSelectorSlot，初始化 DefaultNode
+![进入 NodeSelectorSlot](./images/entry_nodeSelectorSlot.drawio.png)
+
+5. 进入 ClusterBuilderSlot，初始化 ClusterNode
+![进入 ClusterBuilderSlot](./images/entry_clusterBuilderSlot.drawio.png)
+
+6. 进入 LogSlot（略）
+
+7. 进入 StatisticSlot，先处理后续的检查逻辑，再对指标进行累加
+```java
+    public void entry(Context context, ResourceWrapper resourceWrapper, DefaultNode node, int count,
+                      boolean prioritized, Object... args) throws Throwable {
+        
+        // Do some checking.
+        fireEntry(context, resourceWrapper, node, count, prioritized, args);
+
+        // Request passed, add thread count and pass count.
+        node.increaseThreadNum();
+        node.addPassRequest(count);
+    }
+```
+
+8. 进入 AuthoritySlot, 检查对应资源的黑白名单控制规则（AuthorityRule）
+
+9. 进入 SystemSlot，检查系统负载（qps、线程数、平均响应时间等），默认不检查
+
+10. 进入 ParamFlowSlot（略）
+
+11. 进入 FlowSlot，检查对应资源流控规则，使用滑动窗口算法实现，核心逻辑如下
+
+```java
+    public class ArrayMetric implements Metric {
+        //数据保存在 LeapArray 中
+        private final LeapArray<MetricBucket> data;
+    }
+
+    public abstract class LeapArray<T> {
+        // 每一个小窗口（bucket）时间跨度
+        protected int windowLengthInMs;
+        // 样本数量
+        protected int sampleCount;
+        // 总滑动窗口的时间跨度
+        protected int intervalInMs;
+        // 小窗口数组
+        protected final AtomicReferenceArray<WindowWrap<T>> array;
+    }
+
+    public class WindowWrap<T> {
+        /**
+        * 窗口开始时间
+        */
+        private long windowStart;
+
+        /**
+        * 统计数据.
+        */
+        private T value;
+    }
+```
+
+以 LeapArray(2, 1000) 为例，总的滑动窗口的时间跨度 intervalInMs = 1000，样本数量 sampleCount = 2，所以每个小窗口时间跨度 windowLengthInMs = intervalInMs / sampleCount = 500。内部大概的数据结构，如下图所示：
+>           B0          B1
+>     || _ _ _ _ _ | _ _ _ _ _ ||   
+>           0            1           
+>           2            3           
+>           4            5         
+> 0、1、2、3 这些是滚动下标
+
+>           B0          B1
+>     || _ _ _ _ _ | _ _ _ _ _ ||   
+>        [0,500)     [500,1000)
+>        [1000,1500) [1500,2000)
+>        [2000,2500) [2500,3000)
+> 0、500、1000、1500 这些是每个窗口的开始时间 windowStart
+
+```java
+    public long pass() {
+        data.currentWindow();
+        long pass = 0;
+        List<MetricBucket> list = data.values();
+
+        for (MetricBucket window : list) {
+            pass += window.pass();
+        }
+        return pass;
+    }
+
+    public WindowWrap<T> currentWindow(long timeMillis) {
+        if (timeMillis < 0) {
+            return null;
+        }
+
+        // 计算窗口下标
+        int idx = calculateTimeIdx(timeMillis);
+        // 计算窗口开始时间
+        long windowStart = calculateWindowStart(timeMillis);
+
+        /*
+         * Get bucket item at given time from the array.
+         *
+         * (1) Bucket is absent, then just create a new bucket and CAS update to circular array.
+         * (2) Bucket is up-to-date, then just return the bucket.
+         * (3) Bucket is deprecated, then reset current bucket and clean all deprecated buckets.
+         */
+        while (true) {
+            WindowWrap<T> old = array.get(idx);
+            if (old == null) {
+                WindowWrap<T> window = new WindowWrap<T>(windowLengthInMs, windowStart, newEmptyBucket(timeMillis));
+                if (array.compareAndSet(idx, null, window)) {
+                    // Successfully updated, return the created bucket.
+                    return window;
+                } else {
+                    // Contention failed, the thread will yield its time slice to wait for bucket available.
+                    Thread.yield();
+                }
+            } else if (windowStart == old.windowStart()) {
+                return old;
+            } else if (windowStart > old.windowStart()) {
+                
+                if (updateLock.tryLock()) {
+                    try {
+                        return resetWindowTo(old, windowStart);
+                    } finally {
+                        updateLock.unlock();
+                    }
+                } else {
+                    Thread.yield();
+                }
+            } else if (windowStart < old.windowStart()) {
+                // Should not go through here, as the provided time is already behind.
+                // 简单的返回新的 bucket，抛异常是否更合理
+                return new WindowWrap<T>(windowLengthInMs, windowStart, newEmptyBucket(timeMillis));
+            }
+        }
+    }
+
+    private int calculateTimeIdx(long timeMillis) {
+        // 滚动下标
+        long timeId = timeMillis / windowLengthInMs;
+        // 窗口下标
+        return (int)(timeId % array.length());
+    }
+
+    protected long calculateWindowStart(long timeMillis) {
+        // 窗口开始时间
+        return timeMillis - timeMillis % windowLengthInMs;
+    }
+```
+
+12. 进入 DegradeSlot，有三种熔断策略，基于业务错误比例和错误数量的实现类是 ExceptionCircuitBreaker，基于响应时间的实现类 ResponseTimeCircuitBreaker。状态流转如下图：
+![circuit-breaker-state](./images/sentinel_circuitBreaker_state.drawio.png)
+
+13. 离开 slotChain，处理顺序为：solt_1.exit -> solt_1.fireExit -> solt_2.exit -> solt_2.fireExit -> ...，大部分 slot 的 exit 方法没有具体处理逻辑，只是简单调用 fireExit 方法进入下一个 slot
+
