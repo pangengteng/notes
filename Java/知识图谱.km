@@ -226,6 +226,14 @@
                                     "text": "circuit breaker"
                                 },
                                 "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d2qwebo22xk0",
+                                    "created": 1721126423717,
+                                    "text": "config center"
+                                },
+                                "children": []
                             }
                         ]
                     },
