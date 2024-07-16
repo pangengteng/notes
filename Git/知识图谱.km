@@ -1,0 +1,77 @@
+{
+    "root": {
+        "data": {
+            "id": "d2qsnkg9v4w0",
+            "created": 1721115863675,
+            "text": "Git"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "d2qsr6qpp8g0",
+                    "created": 1721116147288,
+                    "text": "add",
+                    "layout_mind_offset": {
+                        "x": -11,
+                        "y": -1
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d2qsrmpip1s0",
+                            "created": 1721116182045,
+                            "text": "backword"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d2qsrb0fp6o0",
+                    "created": 1721116156583,
+                    "text": "commit",
+                    "layout_mind_offset": {
+                        "x": -12,
+                        "y": 5
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d2qsrrzrbn40",
+                            "created": 1721116193548,
+                            "text": "backword"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d2qsrfqzrhc0",
+                    "created": 1721116166896,
+                    "text": "push",
+                    "layout_mind_offset": {
+                        "x": 494,
+                        "y": 128
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d2qsruj5z9k0",
+                            "created": 1721116199075,
+                            "text": "backword"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

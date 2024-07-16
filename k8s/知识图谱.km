@@ -1,0 +1,146 @@
+{
+    "root": {
+        "data": {
+            "id": "d2qs9n5o59c0",
+            "created": 1721114772466,
+            "text": "k8s"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "d2qs9pncg2g0",
+                    "created": 1721114777889,
+                    "text": "container runing"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d2qsa5gxlug0",
+                            "created": 1721114812329,
+                            "text": "docker"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d2qsa7jjw2o0",
+                    "created": 1721114816841,
+                    "text": "controller"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d2qsaf5hk3k0",
+                            "created": 1721114833405,
+                            "text": "deployment"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d2qsapcziyg0",
+                            "created": 1721114855626,
+                            "text": "replica set"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d2qsayta2880",
+                            "created": 1721114876203,
+                            "text": "stateful set"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d2qseok448o0",
+                            "created": 1721115167337,
+                            "text": "job"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d2qsf0nkoa80",
+                            "created": 1721115193668,
+                            "text": "deamonset"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d2qsb5u7rh40",
+                    "created": 1721114891497,
+                    "text": "pod"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "d2qsdfyla3s0",
+                    "created": 1721115070257,
+                    "text": "network"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d2qsc22zq6g0",
+                            "created": 1721114961684,
+                            "text": "services"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d2qsd9e2mb40",
+                            "created": 1721115055956,
+                            "text": "ingress"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d2qsdm8pw3k0",
+                    "created": 1721115083930,
+                    "text": "storage"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d2qsdsmnewg0",
+                            "created": 1721115097834,
+                            "text": "pv / pvc"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d2qsdx08vc80",
+                            "created": 1721115107363,
+                            "text": "configmap"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d2qse1bpgr40",
+                            "created": 1721115116763,
+                            "text": "secret"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
