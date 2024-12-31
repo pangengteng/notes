@@ -1,0 +1,1640 @@
+{
+    "root": {
+        "data": {
+            "id": "d3l89v78zbs0",
+            "created": 1724206726435,
+            "text": "机器学习",
+            "expandState": "expand"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "d3l8ag3snpc0",
+                    "created": 1724206771938,
+                    "text": "人工智能发展历史",
+                    "expandState": "expand"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "d3l8azr4oo00",
+                    "created": 1724206814708,
+                    "text": "核心概念",
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d3l8cstv1k80",
+                            "created": 1724206956364,
+                            "text": "数据",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d3l8b43vjmw0",
+                                    "created": 1724206824186,
+                                    "text": "样本/特征向量",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d3l8cfb6c5k0",
+                                            "created": 1724206926936,
+                                            "text": "训练集",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d3y96843kg80",
+                                                    "created": 1725529541632,
+                                                    "text": "训练",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d3l8cisi5w80",
+                                            "created": 1724206934514,
+                                            "text": "验证集",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d3y96a5e2lk0",
+                                                    "created": 1725529546064,
+                                                    "text": "选择",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d3l8cnjvbm00",
+                                            "created": 1724206944876,
+                                            "text": "测试集",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d3y96ce19co0",
+                                                    "created": 1725529550940,
+                                                    "text": "评估",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d3l8bt8bqmg0",
+                                    "created": 1724206878874,
+                                    "text": "标注/标记/标签",
+                                    "layout_left_offset": {
+                                        "x": -19,
+                                        "y": -25
+                                    },
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d3l9bi489c00",
+                                    "created": 1724209675792,
+                                    "text": "预处理（特征工程、向量化）",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d3l9nmcngzk0",
+                                            "created": 1724210625378,
+                                            "text": "获取/爬虫",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d3l9xjiyecg0",
+                                            "created": 1724211402871,
+                                            "text": "处理缺失的数据",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d3l9o1inyow0",
+                                            "created": 1724210658394,
+                                            "text": "编码",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d3l9ogacyjs0",
+                                            "created": 1724210690543,
+                                            "text": "划分训练集和验证集",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d5fsm1q6elk0",
+                                                    "created": 1730967060348,
+                                                    "text": "留出",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3y8xhkhvmo0",
+                                                    "created": 1725528856937,
+                                                    "text": "交叉验证",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3y948pzzz40",
+                                                    "created": 1725529386228,
+                                                    "text": "自助法",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d3l9xh654ns0",
+                                            "created": 1724211397743,
+                                            "text": "特征缩放",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d3l8bwbrk8w0",
+                            "created": 1724206885613,
+                            "text": "（广义）模型：解决问题的方法",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d3l8hhcy4uw0",
+                                    "created": 1724207323217,
+                                    "text": "归类",
+                                    "layout_right_offset": {
+                                        "x": 23,
+                                        "y": -2
+                                    },
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d3l9mlz8kxc0",
+                                            "created": 1724210546203,
+                                            "text": "任务/问题",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d3l8hwxqxww0",
+                                                    "created": 1724207357127,
+                                                    "text": "分类",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "d3l973d8t680",
+                                                            "created": 1724209330229,
+                                                            "text": "感知机",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d3l978re6qg0",
+                                                            "created": 1724209341968,
+                                                            "text": "对数几率回归",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d3l98dqbbzk0",
+                                                            "created": 1724209431151,
+                                                            "text": "线性判别分析",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d3l9c20ic9c0",
+                                                            "created": 1724209719103,
+                                                            "text": "决策树",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d3l9e7xn4a80",
+                                                            "created": 1724209888718,
+                                                            "text": "神经网络",
+                                                            "expandState": "collapse"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "d3l9ef8spuw0",
+                                                                    "created": 1724209904630,
+                                                                    "text": "深度学习",
+                                                                    "progress": 1,
+                                                                    "expandState": "expand"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d3l9evzp76o0",
+                                                            "created": 1724209941086,
+                                                            "text": "SVM（支持向量机）",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d433v5qu5mo0",
+                                                            "created": 1726022368705,
+                                                            "text": "贝叶斯分类器",
+                                                            "expandState": "collapse"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "d450j42an140",
+                                                                    "created": 1726216081258,
+                                                                    "text": "朴素贝叶斯",
+                                                                    "expandState": "expand"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "d450j9inir40",
+                                                                    "created": 1726216093131,
+                                                                    "text": "半朴素贝叶斯",
+                                                                    "expandState": "expand"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "d450jct21p40",
+                                                                            "created": 1726216100290,
+                                                                            "text": "独依赖",
+                                                                            "expandState": "expand"
+                                                                        },
+                                                                        "children": [
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "d450jo1nauo0",
+                                                                                    "created": 1726216124754,
+                                                                                    "text": "SPODE",
+                                                                                    "expandState": "expand"
+                                                                                },
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "d450m2kcins0",
+                                                                                    "created": 1726216313088,
+                                                                                    "text": "AODE",
+                                                                                    "expandState": "expand"
+                                                                                },
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "d450m52pzg00",
+                                                                                    "created": 1726216318553,
+                                                                                    "text": "TAN",
+                                                                                    "expandState": "expand"
+                                                                                },
+                                                                                "children": []
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "d493j4r8dhk0",
+                                                                    "created": 1726630785922,
+                                                                    "text": "贝叶斯网络",
+                                                                    "expandState": "expand"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "d4gytiea48g0",
+                                                                            "created": 1727429973359,
+                                                                            "text": "训练",
+                                                                            "expandState": "expand"
+                                                                        },
+                                                                        "children": [
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "d4aseyq74ag0",
+                                                                                    "created": 1726802547046,
+                                                                                    "text": "评分函数",
+                                                                                    "layout_right_offset": {
+                                                                                        "x": 4.999999925494194,
+                                                                                        "y": 22.49999966472376
+                                                                                    },
+                                                                                    "expandState": "expand"
+                                                                                },
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "d4asfrvg2340",
+                                                                                    "created": 1726802610490,
+                                                                                    "text": "算法",
+                                                                                    "expandState": "expand"
+                                                                                },
+                                                                                "children": [
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "d4asfur5xio0",
+                                                                                            "created": 1726802616762,
+                                                                                            "text": "贪心算法",
+                                                                                            "progress": null,
+                                                                                            "expandState": "expand"
+                                                                                        },
+                                                                                        "children": []
+                                                                                    },
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "d4asgig1nf40",
+                                                                                            "created": 1726802668332,
+                                                                                            "text": "约束网络结构",
+                                                                                            "expandState": "expand"
+                                                                                        },
+                                                                                        "children": []
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "d4gytuurmhs0",
+                                                                            "created": 1727430000477,
+                                                                            "text": "预测",
+                                                                            "expandState": "expand"
+                                                                        },
+                                                                        "children": [
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "d4asgzgtnn40",
+                                                                                    "created": 1726802705385,
+                                                                                    "text": "吉布斯采样",
+                                                                                    "progress": 1,
+                                                                                    "expandState": "expand"
+                                                                                },
+                                                                                "children": []
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3yv9uz3so80",
+                                                    "created": 1725591890907,
+                                                    "text": "标注",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "d3yvcf1i1h40",
+                                                            "created": 1725592091315,
+                                                            "text": "隐马尔可夫模型",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3l8i1ntsns0",
+                                                    "created": 1724207367411,
+                                                    "text": "回归",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "d3l97umtksw0",
+                                                            "created": 1724209389581,
+                                                            "text": "一/多元回归、（非）线性回归",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d3l9f6kjdko0",
+                                                            "created": 1724209964113,
+                                                            "text": "SVR（支持向量回归）",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d5shx8y6gbk0",
+                                                            "created": 1732257185303,
+                                                            "text": "决策树"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d3l9mqqbpls0",
+                                            "created": 1724210556548,
+                                            "text": "标记",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d3l8bxygyw00",
+                                                    "created": 1724206889162,
+                                                    "text": "监督学习",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3l8c3xcms80",
+                                                    "created": 1724206902155,
+                                                    "text": "无监督学习",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3qkj7inw9s0",
+                                                    "created": 1724749111626,
+                                                    "text": "半监督学习",
+                                                    "priority": null,
+                                                    "progress": 1,
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3qkjgsclgw0",
+                                                    "created": 1724749131804,
+                                                    "text": "强化学习",
+                                                    "progress": 1,
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d4db2mv6vw80",
+                                            "created": 1727058301858,
+                                            "text": "算法",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d4db2oisntc0",
+                                                    "created": 1727058305463,
+                                                    "text": "生成模型",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d4db2s20cow0",
+                                                    "created": 1727058313155,
+                                                    "text": "判别模型",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d3l9av96tb40",
+                                    "created": 1724209626026,
+                                    "text": "性能度量与比较（测试性能和泛化性能）",
+                                    "layout_right_offset": {
+                                        "x": 19,
+                                        "y": 58
+                                    },
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d3lakgkllsw0",
+                                            "created": 1724213198816,
+                                            "text": "度量方法（评分标准）",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d3la0o3uifs0",
+                                                    "created": 1724211647934,
+                                                    "text": "错误率/正确率",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3la0sm1dc80",
+                                                    "created": 1724211657741,
+                                                    "text": "精确率（查准率）/召回率（查全率）、P-R 曲线、平衡点、F1",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3la5j2vzfs0",
+                                                    "created": 1724212028813,
+                                                    "text": "ROC 、AUC",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3la7mtc6fc0",
+                                                    "created": 1724212193671,
+                                                    "text": "代价敏感错误率/代价曲线",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d3lahgifsls0",
+                                            "created": 1724212963592,
+                                            "text": "比较方法",
+                                            "progress": null,
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d3qcrvufzfk0",
+                                                    "created": 1724727222615,
+                                                    "text": "单模型",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "d3qcsxq6dz40",
+                                                            "created": 1724727305075,
+                                                            "text": "二重假设检验",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d3qk1y9g1y80",
+                                                            "created": 1724747759287,
+                                                            "text": "t检验",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3qcs0kj9fc0",
+                                                    "created": 1724727232900,
+                                                    "text": "多模型",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "d3qk22d9hi80",
+                                                            "created": 1724747768225,
+                                                            "text": "交叉验证t检验",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d5fuxjg9cvk0",
+                                            "created": 1730973603156,
+                                            "text": "影响模型性能因素",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d5fuxtk83co0",
+                                                    "created": 1730973625164,
+                                                    "text": "超参（复杂度）",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "d5fuyfx53pc0",
+                                                            "created": 1730973673834,
+                                                            "text": "验证曲线",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "d5jvdamft1c0",
+                                                                    "created": 1731381077592,
+                                                                    "text": "模型复杂度和训练分数、验证分数之间的关系：随着模型复杂度的增加，训练分数上升趋于稳定，验证分数先上升后下降",
+                                                                    "expandState": "expand"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d5gggsxexyo0",
+                                                            "created": 1731034356012,
+                                                            "text": "网格搜索",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d5fuy7bwoi00",
+                                                    "created": 1730973655136,
+                                                    "text": "训练集",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "d5fuykjkn1c0",
+                                                            "created": 1730973683897,
+                                                            "text": "学习曲线",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "d5jv81ztgkg0",
+                                                                    "created": 1731380666989,
+                                                                    "text": "数据集和训练分数、验证分数之间的关系: 随着数据集的增加，训练分数下降，验证分数上升，两者趋于稳定",
+                                                                    "expandState": "expand"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d3l8i6osi1s0",
+                                    "created": 1724207378353,
+                                    "text": "学习策略",
+                                    "layout_right_offset": {
+                                        "x": 13.499999739229679,
+                                        "y": 205.99999776482582
+                                    },
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d3l8k79ppx40",
+                                            "created": 1724207536347,
+                                            "text": "原则：误差最小",
+                                            "expandState": "expand",
+                                            "layout_right_offset": {
+                                                "x": 3,
+                                                "y": 44
+                                            }
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d3r67hmj8480",
+                                                    "created": 1724810257676,
+                                                    "text": "期望风险",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3r67l53ryo0",
+                                                    "created": 1724810265329,
+                                                    "text": "经验风险",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3r67nnz5vs0",
+                                                    "created": 1724810270824,
+                                                    "text": "结构风险",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "d3y7wxitg6w0",
+                                                            "created": 1725525992190,
+                                                            "text": "正则化：代表模型复杂度",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d3y7x0erx9c0",
+                                                            "created": 1725525998476,
+                                                            "text": "过拟合：模型包含参数过多，导致训练误差很小，测试误差很大的现象",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d42aa1j5z600",
+                                            "created": 1725938901699,
+                                            "text": "目标/损失/代价函数 ",
+                                            "layout_right_offset": {
+                                                "x": -2,
+                                                "y": 30
+                                            },
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d42aaiddsqg0",
+                                                    "created": 1725938938355,
+                                                    "text": "0-1 损失",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "d63nhp5msio0",
+                                                            "created": 1733390052938,
+                                                            "text": "分类"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d63noav9l4w0",
+                                                            "created": 1733390570386,
+                                                            "text": "合页损失函数"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "d63noq9yzzs0",
+                                                                    "created": 1733390603926,
+                                                                    "text": "svm"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d63noulvzx40",
+                                                            "created": 1733390613354,
+                                                            "text": "指数损失函数"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "d63noyx79s80",
+                                                                    "created": 1733390622745,
+                                                                    "text": "adaboosting"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d42aav1d0400",
+                                                    "created": 1725938965926,
+                                                    "text": "平方/绝对值",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "d63nhttf2dk0",
+                                                            "created": 1733390063084,
+                                                            "text": "回归"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d42afsyaowg0",
+                                                            "created": 1725939353208,
+                                                            "text": "最小二乘",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d42ab6149fc0",
+                                                    "created": 1725938989856,
+                                                    "text": "对数条件概率",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "d3l8jivqiw00",
+                                                            "created": 1724207483259,
+                                                            "text": "极大似然",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d3l8jv3icvc0",
+                                                            "created": 1724207509850,
+                                                            "text": "最大后验概率",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d5qwr1gp7o80",
+                                                    "created": 1732095895559,
+                                                    "text": "交叉熵",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d5qyyymvseo0",
+                                                    "created": 1732102158535,
+                                                    "text": "指数",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d3l8l6f8pio0",
+                                    "created": 1724207612868,
+                                    "text": "算法（迭代）",
+                                    "layout_right_offset": {
+                                        "x": 8.99999992549408,
+                                        "y": 234.99999783933163
+                                    },
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d3l8l9p03sg0",
+                                            "created": 1724207619989,
+                                            "text": "无约束",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d3l8lkpmr340",
+                                                    "created": 1724207643971,
+                                                    "text": "梯度下降",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3l8lollnpk0",
+                                                    "created": 1724207652435,
+                                                    "text": "最速下降",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3l8mm6igqw0",
+                                                    "created": 1724207725533,
+                                                    "text": "坐标下降",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3l8mq183i00",
+                                                    "created": 1724207733920,
+                                                    "text": "牛顿法（线性化）",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d3l8lhzl8v40",
+                                            "created": 1724207638043,
+                                            "text": "有约束",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d3l8mtzyseo0",
+                                                    "created": 1724207742552,
+                                                    "text": "拉格朗日法",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3l8tpmgmjk0",
+                                                    "created": 1724208281577,
+                                                    "text": "内点法",
+                                                    "expandState": "expand",
+                                                    "progress": 1
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d3l8tvv60200",
+                                                    "created": 1724208295164,
+                                                    "text": "启发算法",
+                                                    "expandState": "expand",
+                                                    "progress": 1
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d42a48wd5ko0",
+                                    "created": 1725938447550,
+                                    "text": "（狭义）模型：预测函数",
+                                    "layout_right_offset": {
+                                        "x": 88.74999867752194,
+                                        "y": -953.7499857880177
+                                    },
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d42a4ow7vw00",
+                                            "created": 1725938482369,
+                                            "text": "决策函数",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d42a4s57hm80",
+                                            "created": 1725938489443,
+                                            "text": "条件概率函数",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d3l8vwpauco0",
+                    "created": 1724208453714,
+                    "text": "预备知识",
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d3l8wltyhog0",
+                            "created": 1724208508416,
+                            "text": "高等数学",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d3l8ydg1lfc0",
+                                    "created": 1724208646888,
+                                    "text": "微分",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d3l8ykiuxio0",
+                                    "created": 1724208662296,
+                                    "text": "泰勒多项式展开",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d3l8w0oudxs0",
+                            "created": 1724208462394,
+                            "text": "线性代数",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d3l8wxy9gbc0",
+                                    "created": 1724208534797,
+                                    "text": "向量/矩阵基本运算、求导",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d3l8zngreds0",
+                                    "created": 1724208747064,
+                                    "text": "向量空间、维数、基",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d3l8x9nz1nk0",
+                                    "created": 1724208560297,
+                                    "text": "矩阵逆、转置、正定",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d3l8zu3tqao0",
+                                    "created": 1724208761519,
+                                    "text": "点积、行列式、特征值、特征向量、奇异值分解",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d3l8w7jazxs0",
+                            "created": 1724208477297,
+                            "text": "概率统计",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d3lad6ob8q00",
+                                    "created": 1724212628723,
+                                    "text": "常见概率律",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d3lacpa9bog0",
+                                    "created": 1724212590868,
+                                    "text": "方差、协方差、偏差",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d3l91ltzvs00",
+                                    "created": 1724208900239,
+                                    "text": "贝叶斯定理",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d3l91wln1c00",
+                                    "created": 1724208923678,
+                                    "text": "马尔可夫链",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d3lah0cohh40",
+                                    "created": 1724212928416,
+                                    "text": "统计推断",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d4dhnmk2tuo0",
+                                    "created": 1727076873493,
+                                    "text": "采样",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d4di5k7pbrs0",
+                                            "created": 1727078278947,
+                                            "text": "基于概率采样（CDF 逆函数）",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d4di5oovbco0",
+                                            "created": 1727078288692,
+                                            "text": "拒绝采样",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d4di64m7heo0",
+                                            "created": 1727078323359,
+                                            "text": "重要性采样",
+                                            "progress": 1,
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d4djzm6qzl40",
+                                            "created": 1727083455277,
+                                            "text": "MCMC",
+                                            "progress": 1,
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d4djzo737nk0",
+                                                    "created": 1727083459651,
+                                                    "text": "MH",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d4djzt8p4cg0",
+                                                    "created": 1727083470633,
+                                                    "text": "Gibbs",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d3l8wu1y9480",
+                            "created": 1724208526313,
+                            "text": "凸优化",
+                            "layout_left_offset": {
+                                "x": -2,
+                                "y": 61
+                            },
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d3l922h0e000",
+                                    "created": 1724208936459,
+                                    "text": "拉格朗日函数",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d3l92am4a2g0",
+                                    "created": 1724208954182,
+                                    "text": "对偶问题",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d3l92deo5y00",
+                                    "created": 1724208960262,
+                                    "text": "KKT",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d3l9cgfkczs0",
+                            "created": 1724209750488,
+                            "text": "信息论",
+                            "layout_left_offset": {
+                                "x": 2,
+                                "y": -162
+                            },
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d3l9ck4jr540",
+                                    "created": 1724209758529,
+                                    "text": "熵、信息量",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d4r5c1a48nk0",
+                    "created": 1728463951247,
+                    "text": "实现",
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d4r5cj2ts4g0",
+                            "created": 1728463989989,
+                            "text": "python",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d4r5clh4rc00",
+                                    "created": 1728463995207,
+                                    "text": "numpy",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d4r5cttdmps0",
+                                            "created": 1728464013362,
+                                            "text": "ndarray",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d4r5f4f1vg00",
+                                                    "created": 1728464193169,
+                                                    "text": "与Python List 区别",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d4r5finw22o0",
+                                                    "created": 1728464224178,
+                                                    "text": "索引",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "d4r5glqx06o0",
+                                                            "created": 1728464309255,
+                                                            "text": "普通",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d4r5gnmt1p40",
+                                                            "created": 1728464313360,
+                                                            "text": "掩码",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d4r5gy3688w0",
+                                                            "created": 1728464336118,
+                                                            "text": "花哨",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d4r5cnv3is80",
+                                    "created": 1728464000405,
+                                    "text": "pandas",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d4r5cwyoe9c0",
+                                            "created": 1728464020213,
+                                            "text": "Series",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d4r5j5t5f0g0",
+                                                    "created": 1728464509654,
+                                                    "text": "具有显式索引的Numpy 一维数组",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d4r5jpwpx140",
+                                                    "created": 1728464553406,
+                                                    "text": "统一类型的key 和 统一类型的 value 的特殊的字典",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d4ry3ka30o00",
+                                                    "created": 1728545099514,
+                                                    "text": "使用整数显式索引时，d[1]是显式索引，d[1:3]是隐式索引",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d4r5d03auk80",
+                                            "created": 1728464027023,
+                                            "text": "DataFrame",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d4r5j5t5f0g0",
+                                                    "created": 1728464509654,
+                                                    "text": "具有显式索引的Numpy 二维数组",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d4r5l8zc8so0",
+                                                    "created": 1728464673287,
+                                                    "text": "值是 Series 的特殊字典",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d4r5d8ejw5k0",
+                                            "created": 1728464045117,
+                                            "text": "Index",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d4r5lxmqt1k0",
+                                                    "created": 1728464726945,
+                                                    "text": "不可变数组",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d4r5m1350nc0",
+                                                    "created": 1728464734467,
+                                                    "text": "有序集合（可重复）",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d4thx83rlc80",
+                                                    "created": 1728702584980,
+                                                    "text": "MultiIndex",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d57yj2l7ork0",
+                                    "created": 1730171274138,
+                                    "text": "matplotlib",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d57yj9ey5480",
+                                            "created": 1730171288997,
+                                            "text": "plt.plot",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d57yje0c44o0",
+                                            "created": 1730171298997,
+                                            "text": "plt.scatter",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d5849cvar600",
+                                            "created": 1730187439534,
+                                            "text": "plt.contour",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

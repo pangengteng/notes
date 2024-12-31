@@ -1,0 +1,22 @@
+{
+    "root": {
+        "data": {
+            "id": "d3wjsp1wde80",
+            "created": 1725356393702,
+            "text": "开发工具"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "d3wjsthp2d40",
+                    "created": 1725356403364,
+                    "text": "时序图"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

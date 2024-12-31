@@ -19,7 +19,99 @@
                             "created": 1721113306077,
                             "text": "GC"
                         },
-                        "children": []
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d6mc0qk2kl40",
+                                    "created": 1735287330765,
+                                    "text": "Old Generation",
+                                    "layout_right_offset": {
+                                        "x": 3,
+                                        "y": 191
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d6mc1anyt680",
+                                            "created": 1735287374536,
+                                            "text": "Serial Old",
+                                            "layout_right_offset": {
+                                                "x": -7,
+                                                "y": 11
+                                            }
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d6mc1gid7js0",
+                                            "created": 1735287387258,
+                                            "text": "Parallel Old",
+                                            "layout_right_offset": {
+                                                "x": 0,
+                                                "y": 13
+                                            }
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d6mc1wo9mqw0",
+                                            "created": 1735287422444,
+                                            "text": "CMS"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d6mc0rkz0800",
+                                    "created": 1735287332996,
+                                    "text": "Young Generation",
+                                    "expandState": "expand",
+                                    "layout_right_offset": {
+                                        "x": -9,
+                                        "y": -91
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d6mbq8x17oo0",
+                                            "created": 1735286508725,
+                                            "text": "Serial"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d6mbzhshnw80",
+                                            "created": 1735287233319,
+                                            "text": "ParNew"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d6mc0d31zkw0",
+                                            "created": 1735287301438,
+                                            "text": "Parallel Scavenge"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d6mc2alvse80",
+                                    "created": 1735287452774,
+                                    "text": "G1"
+                                },
+                                "children": []
+                            }
+                        ]
                     },
                     {
                         "data": {
@@ -99,7 +191,7 @@
                         "data": {
                             "id": "d2qs6jzyodc0",
                             "created": 1721114530498,
-                            "text": "多线程"
+                            "text": "多线程 & 并发编程"
                         },
                         "children": [
                             {
