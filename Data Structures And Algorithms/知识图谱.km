@@ -17,7 +17,8 @@
                         "data": {
                             "id": "array",
                             "created": 1735373463562,
-                            "text": "数组"
+                            "text": "数组",
+                            "progress": 9
                         },
                         "children": []
                     },
@@ -25,7 +26,8 @@
                         "data": {
                             "id": "list",
                             "created": 1735373463562,
-                            "text": "链表"
+                            "text": "链表",
+                            "progress": 9
                         },
                         "children": [
                             {
@@ -74,7 +76,8 @@
                         "data": {
                             "id": "stack",
                             "created": 1735373463562,
-                            "text": "栈"
+                            "text": "栈",
+                            "progress": 9
                         },
                         "children": [
                             {
@@ -99,7 +102,8 @@
                         "data": {
                             "id": "queue",
                             "created": 1735373463562,
-                            "text": "队列"
+                            "text": "队列",
+                            "progress": 9
                         },
                         "children": [
                             {
@@ -365,7 +369,8 @@
                 "data": {
                     "id": "complexity",
                     "created": 1735373766776,
-                    "text": "复杂度分析"
+                    "text": "复杂度分析",
+                    "progress": 9
                 },
                 "children": [
                     {
@@ -374,7 +379,40 @@
                             "created": 1735373766776,
                             "text": "时间复杂度"
                         },
-                        "children": []
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d6usl1fg3kg0",
+                                    "created": 1736146539126,
+                                    "text": "最好"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d6usl3iobds0",
+                                    "created": 1736146543674,
+                                    "text": "最坏"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d6usl4xx7480",
+                                    "created": 1736146546773,
+                                    "text": "平均"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d6usl6inoew0",
+                                    "created": 1736146550203,
+                                    "text": "均摊"
+                                },
+                                "children": []
+                            }
+                        ]
                     },
                     {
                         "data": {
