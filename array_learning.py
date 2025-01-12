@@ -73,6 +73,57 @@ def selectionSort(head: Optional[ListNode]) -> Optional[ListNode]:
     
     return dummy.next
 
-listNode = ListNode(4, ListNode(2, ListNode(1, ListNode(3))))
-result = selectionSort(listNode)
-print(result)
+# listNode = ListNode(4, ListNode(2, ListNode(1, ListNode(3))))
+# result = selectionSort(listNode)
+# print(result)
+
+import sys
+
+def mergeSort(array:Optional[int]) -> Optional[int]:
+    if len(array) == 0 or len(array) == 1:
+        return array
+    q = len(array) // 2
+    
+    # spilt
+    left = mergeSort(array[:q])
+    right = mergeSort(array[q:])
+
+    # merge
+    tmp = [None] * (len(left) + len(right))
+    left.append(sys.maxsize)
+    right.append(sys.maxsize)
+    i = j = 0
+    for k in range(len(tmp)):
+        if left[i] < right[j]:
+            tmp[k] = left[i]
+            i += 1
+        else:
+            tmp[k] = right[j]
+            j += 1
+    return tmp
+
+
+def quick_sort(array:Optional[int]):
+
+    def _partition(array, start, end):
+        pivot = array[end]
+        i = 0
+        for j in range(0, end):
+            if array[j] < pivot:
+                array[i], array[j] = array[j], array[i]
+                i += 1
+        array[i], array[end] = array[end], array[i]
+        return i
+
+    def _quick_sort(array:Optional[int], start: Optional[int], end: Optional[int]):
+        if start >= end:
+            return
+        p = _partition(array, start, end)
+        _quick_sort(array, start, p-1)
+        _quick_sort(array, p, end)    
+
+    _quick_sort(array, 0, len(array)-1)
+
+array = [3, 2, 1, 4, 5]
+quick_sort(array)
+print(array)
