@@ -124,6 +124,20 @@ def quick_sort(array:Optional[int]):
 
     _quick_sort(array, 0, len(array)-1)
 
+
+def shell_sort(array:Optional[int]):
+    n = len(array)
+    gap = n // 2
+    while gap > 0:
+        for i in range(gap, n):
+            j = i
+            value = array[j]
+            while j - gap >= 0 and array[j-gap] > value:
+                array[j] = array[j-gap]
+                j -= gap
+            array[j] = value
+        gap = gap // 2
+
 array = [3, 2, 1, 4, 5]
-quick_sort(array)
+shell_sort(array)
 print(array)

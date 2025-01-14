@@ -428,24 +428,117 @@
                 "data": {
                     "id": "sorting",
                     "created": 1735373766776,
-                    "text": "排序"
+                    "text": "排序",
+                    "progress": 9
                 },
                 "children": [
                     {
                         "data": {
-                            "id": "bubble_sort",
-                            "created": 1735373766776,
-                            "text": "冒泡排序"
+                            "id": "d71gk01cvns0",
+                            "created": 1736823524110,
+                            "text": "O(n2)"
                         },
-                        "children": []
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "bubble_sort",
+                                    "created": 1735373766776,
+                                    "text": "冒泡排序"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d71gk6v47tc0",
+                                    "created": 1736823538970,
+                                    "text": "插入排序"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d71gkajea7k0",
+                                    "created": 1736823546969,
+                                    "text": "选择排序"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d71gkd9uv200",
+                                    "created": 1736823552922,
+                                    "text": "希尔排序"
+                                },
+                                "children": []
+                            }
+                        ]
                     },
                     {
                         "data": {
-                            "id": "quick_sort",
-                            "created": 1735373766776,
-                            "text": "快速排序"
+                            "id": "d71gk5q04400",
+                            "created": 1736823536484,
+                            "text": "O(nlogn)"
                         },
-                        "children": []
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "quick_sort",
+                                    "created": 1735373766776,
+                                    "text": "快速排序"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d71gkmm6trs0",
+                                    "created": 1736823573259,
+                                    "text": "归并排序"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d71gkpxczog0",
+                                    "created": 1736823580465,
+                                    "text": "堆排序",
+                                    "progress": 1
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d71gkwkfvqo0",
+                            "created": 1736823594921,
+                            "text": "O(n)"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d71gl0hedeo0",
+                                    "created": 1736823603444,
+                                    "text": "桶排序"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d71gl2tclzc0",
+                                    "created": 1736823608520,
+                                    "text": "计数排序"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d71gl5acvxs0",
+                                    "created": 1736823613902,
+                                    "text": "基数排序"
+                                },
+                                "children": []
+                            }
+                        ]
                     }
                 ]
             },
