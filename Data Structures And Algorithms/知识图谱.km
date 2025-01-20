@@ -566,6 +566,39 @@
                         "children": []
                     }
                 ]
+            },
+            {
+                "data": {
+                    "id": "d76ypkp45ls0",
+                    "created": 1737382540665,
+                    "text": "查找"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d76ypo8wplc0",
+                            "created": 1737382548392,
+                            "text": "线性表查找"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d76ypsx4vpk0",
+                            "created": 1737382558564,
+                            "text": "树结构查找"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d76ypxui8kw0",
+                            "created": 1737382569289,
+                            "text": "散列表查找"
+                        },
+                        "children": []
+                    }
+                ]
             }
         ]
     },
