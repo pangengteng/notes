@@ -1,37 +1,73 @@
 from typing import List
 
 
-class Solution:
-    def findKthLargest(self, nums: List[int], k: int) -> int:
-        nums = self.merge_sort(nums)
-        return nums[-k]
+def first_index_of(array, value):
+    low, high = 0, len(array) - 1
+    while low <= high:
+        mid = low + ((high - low) >> 1)
+        if array[mid] >= value:
+            high = mid - 1
+        else:
+            low = mid + 1
     
-    def merge_sort(self, nums):
-        if len(nums) == 0 or len(nums) == 1:
-            return nums
-        
-        p = len(nums) // 2
-
-        left = self.merge_sort(nums[:p])
-        right = self.merge_sort(nums[p:])
-        return self.merge(left, right)
+    if low < len(array) and array[low] == value:
+        return low
     
-    def merge(self, left, right):
-        if left[-1] <= right[0]:
-            return left + right
-        
-        tmp = [None] * (len(left) + len(right))
-        left.append(float('inf'))
-        right.append(float('inf'))
-        i = j = 0
-        for k in range(len(tmp)):
-            if left[i] <= right[j]:
-                tmp[k] = left[i]
-                i += 1
-            else:
-                tmp[k] = right[j]
-                j += 1
-        return tmp
-            
+    return -1
 
-print(Solution().findKthLargest([3,2,1,5,6,4], 2))
+
+def last_index_of(array, value):
+    low, high = 0, len(array) - 1
+    while low <= high:
+        mid = low + ((high - low) >> 1)
+        if array[mid] <= value:
+            low = mid + 1
+        else:
+            high = mid - 1
+    if high >= 0 and array[high] == value:
+        return high
+    return -1
+
+
+def first_gt_index_of(array, value):
+    low, high = 0, len(array) - 1
+    while low <= high:
+        mid = low + ((high - low) >> 1)
+        if array[mid] >= value:
+            high = mid - 1
+        else:
+            low = mid + 1
+    if low < len(array):
+        return low
+    return -1
+
+
+def last_lt_index_of(array, value):
+    low, high = 0, len(array) - 1
+    while low <= high:
+        mid = low + ((high - low) >> 1)
+        if array[mid] <= value:
+            low = mid + 1
+        else:
+            high = mid - 1
+    if high >= 0:
+        return high
+    return -1
+
+def insert_index_of(array, value):
+    low, high = 0, len(array) - 1
+    while low <= high:
+        mid = low + ((high - low) >> 1)
+        if array[mid] <= value:
+            low = mid + 1
+        else:
+            high = mid - 1
+    if low < len(array):
+        return low
+    return -1 # all of elements smaller or equals than value
+
+print(first_index_of([1, 2, 3, 3, 3, 3, 4, 5], 3))  # 2
+print(last_index_of([1, 2, 3, 3, 3, 3, 4, 5], 3))  # 5
+print(first_gt_index_of([1, 2, 3, 3, 3, 3, 4, 5], 3))  # 2
+print(last_lt_index_of([1, 2, 3, 3, 3, 3, 4, 5], 3))  # 5
+print(insert_index_of([1, 2, 3, 3, 3, 3, 4, 5], 3))  # 6
