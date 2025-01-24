@@ -580,7 +580,24 @@
                             "created": 1737382548392,
                             "text": "线性表查找"
                         },
-                        "children": []
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d7a2wy7cqlk0",
+                                    "created": 1737699082924,
+                                    "text": "二分查找"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d7a68671bc00",
+                                    "created": 1737708425655,
+                                    "text": "跳表"
+                                },
+                                "children": []
+                            }
+                        ]
                     },
                     {
                         "data": {
