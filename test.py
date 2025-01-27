@@ -1,73 +1,34 @@
-from typing import List
+class MyHashSet:            
+
+    def __init__(self):
+        self.array = [-1] * (1 >> 14)
+        
+    def _hash(self, key):
+        return ((key >> 10) ^ key) & ((1 >> 14) - 1)
 
 
-def first_index_of(array, value):
-    low, high = 0, len(array) - 1
-    while low <= high:
-        mid = low + ((high - low) >> 1)
-        if array[mid] >= value:
-            high = mid - 1
-        else:
-            low = mid + 1
-    
-    if low < len(array) and array[low] == value:
-        return low
-    
-    return -1
+    def add(self, key: int) -> None:
+        idx = self._hash(key)
+        self.array[idx] = key
+        
+
+    def remove(self, key: int) -> None:
+        idx = self._hash(key)
+        self.array[idx] = -1
+
+    def contains(self, key: int) -> bool:
+        idx = self._hash(key)
+        return key == self.array[idx]
+        
 
 
-def last_index_of(array, value):
-    low, high = 0, len(array) - 1
-    while low <= high:
-        mid = low + ((high - low) >> 1)
-        if array[mid] <= value:
-            low = mid + 1
-        else:
-            high = mid - 1
-    if high >= 0 and array[high] == value:
-        return high
-    return -1
+# Your MyHashSet object will be instantiated and called as such:
+# obj = MyHashSet()
+# obj.add(key)
+# obj.remove(key)
+# param_3 = obj.contains(key)
 
-
-def first_gt_index_of(array, value):
-    low, high = 0, len(array) - 1
-    while low <= high:
-        mid = low + ((high - low) >> 1)
-        if array[mid] >= value:
-            high = mid - 1
-        else:
-            low = mid + 1
-    if low < len(array):
-        return low
-    return -1
-
-
-def last_lt_index_of(array, value):
-    low, high = 0, len(array) - 1
-    while low <= high:
-        mid = low + ((high - low) >> 1)
-        if array[mid] <= value:
-            low = mid + 1
-        else:
-            high = mid - 1
-    if high >= 0:
-        return high
-    return -1
-
-def insert_index_of(array, value):
-    low, high = 0, len(array) - 1
-    while low <= high:
-        mid = low + ((high - low) >> 1)
-        if array[mid] <= value:
-            low = mid + 1
-        else:
-            high = mid - 1
-    if low < len(array):
-        return low
-    return -1 # all of elements smaller or equals than value
-
-print(first_index_of([1, 2, 3, 3, 3, 3, 4, 5], 3))  # 2
-print(last_index_of([1, 2, 3, 3, 3, 3, 4, 5], 3))  # 5
-print(first_gt_index_of([1, 2, 3, 3, 3, 3, 4, 5], 3))  # 2
-print(last_lt_index_of([1, 2, 3, 3, 3, 3, 4, 5], 3))  # 5
-print(insert_index_of([1, 2, 3, 3, 3, 3, 4, 5], 3))  # 6
+hashSet = MyHashSet()
+hashSet.add(1)
+hashSet.add(2)
+hashSet.contains(1)    # returns true
