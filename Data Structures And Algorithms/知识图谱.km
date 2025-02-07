@@ -154,7 +154,8 @@
                 "data": {
                     "id": "hash_table",
                     "created": 1735373463562,
-                    "text": "散列表"
+                    "text": "散列表",
+                    "progress": 9
                 },
                 "children": [
                     {
@@ -240,17 +241,50 @@
                             },
                             {
                                 "data": {
-                                    "id": "avl",
-                                    "created": 1735373766776,
-                                    "text": "AVL树"
+                                    "id": "d7lv5yuot740",
+                                    "created": 1738895940214,
+                                    "text": "二叉查找树"
                                 },
                                 "children": []
                             },
                             {
                                 "data": {
-                                    "id": "red_black",
-                                    "created": 1735373766776,
-                                    "text": "红黑树"
+                                    "id": "d7lv641jn480",
+                                    "created": 1738895951512,
+                                    "text": "平衡二叉查找树"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "avl",
+                                            "created": 1735373766776,
+                                            "text": "AVL树"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "red_black",
+                                            "created": 1735373766776,
+                                            "text": "红黑树"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d7lv6e9igw00",
+                                    "created": 1738895973762,
+                                    "text": "完全二叉树"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d7lv6ml1vq80",
+                                    "created": 1738895991874,
+                                    "text": "满二叉树"
                                 },
                                 "children": []
                             }
@@ -317,6 +351,55 @@
                                     "id": "max_heap",
                                     "created": 1735373766776,
                                     "text": "大顶堆"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d7lv6xqfnv40",
+                                    "created": 1738896016144,
+                                    "text": "优先级队列"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d7lv70yd93s0",
+                                    "created": 1738896023154,
+                                    "text": "斐波那契堆"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d7lv7dy2tls0",
+                                    "created": 1738896051434,
+                                    "text": "二项堆"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d7lv7nk83s00",
+                            "created": 1738896072365,
+                            "text": "其他"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d7lv7qdp8o00",
+                                    "created": 1738896078501,
+                                    "text": "树状数组"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d7lv7xi65og0",
+                                    "created": 1738896094008,
+                                    "text": "线段树"
                                 },
                                 "children": []
                             }
@@ -578,7 +661,8 @@
                         "data": {
                             "id": "d76ypo8wplc0",
                             "created": 1737382548392,
-                            "text": "线性表查找"
+                            "text": "线性表查找",
+                            "progress": 9
                         },
                         "children": [
                             {
