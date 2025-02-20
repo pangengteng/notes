@@ -235,7 +235,8 @@
                                 "data": {
                                     "id": "balanced_bt",
                                     "created": 1735373766776,
-                                    "text": "平衡二叉树"
+                                    "text": "平衡二叉树",
+                                    "progress": 9
                                 },
                                 "children": []
                             },
@@ -243,7 +244,8 @@
                                 "data": {
                                     "id": "d7lv5yuot740",
                                     "created": 1738895940214,
-                                    "text": "二叉查找树"
+                                    "text": "二叉查找树",
+                                    "progress": 9
                                 },
                                 "children": []
                             },
@@ -266,7 +268,8 @@
                                         "data": {
                                             "id": "red_black",
                                             "created": 1735373766776,
-                                            "text": "红黑树"
+                                            "text": "红黑树",
+                                            "progress": 9
                                         },
                                         "children": []
                                     }
@@ -276,7 +279,8 @@
                                 "data": {
                                     "id": "d7lv6e9igw00",
                                     "created": 1738895973762,
-                                    "text": "完全二叉树"
+                                    "text": "完全二叉树",
+                                    "progress": 9
                                 },
                                 "children": []
                             },
@@ -284,7 +288,8 @@
                                 "data": {
                                     "id": "d7lv6ml1vq80",
                                     "created": 1738895991874,
-                                    "text": "满二叉树"
+                                    "text": "满二叉树",
+                                    "progress": 9
                                 },
                                 "children": []
                             }
@@ -335,22 +340,26 @@
                         "data": {
                             "id": "heap",
                             "created": 1735373766776,
-                            "text": "堆"
+                            "text": "堆",
+                            "expandState": "expand"
                         },
                         "children": [
                             {
                                 "data": {
-                                    "id": "min_heap",
+                                    "id": "max_heap",
                                     "created": 1735373766776,
-                                    "text": "小顶堆"
+                                    "text": "大顶堆（最大堆）",
+                                    "progress": 9
                                 },
                                 "children": []
                             },
                             {
                                 "data": {
-                                    "id": "max_heap",
+                                    "id": "min_heap",
                                     "created": 1735373766776,
-                                    "text": "大顶堆"
+                                    "text": "小顶堆（最小堆）",
+                                    "progress": 9,
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             },
@@ -358,7 +367,21 @@
                                 "data": {
                                     "id": "d7lv6xqfnv40",
                                     "created": 1738896016144,
-                                    "text": "优先级队列"
+                                    "text": "优先级队列",
+                                    "progress": 9
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d7vcw7dxlcw0",
+                                    "created": 1739859994738,
+                                    "text": "二叉堆",
+                                    "progress": 9,
+                                    "layout_right_offset": {
+                                        "x": 5,
+                                        "y": 1
+                                    }
                                 },
                                 "children": []
                             },
@@ -366,7 +389,8 @@
                                 "data": {
                                     "id": "d7lv70yd93s0",
                                     "created": 1738896023154,
-                                    "text": "斐波那契堆"
+                                    "text": "斐波那契堆",
+                                    "expandState": "expand"
                                 },
                                 "children": []
                             },
@@ -420,7 +444,24 @@
                             "created": 1735373766776,
                             "text": "图的存储"
                         },
-                        "children": []
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d7w2aaavxyo0",
+                                    "created": 1739931625930,
+                                    "text": "邻接矩阵"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d7w2anply4g0",
+                                    "created": 1739931655119,
+                                    "text": "邻接表"
+                                },
+                                "children": []
+                            }
+                        ]
                     },
                     {
                         "data": {
@@ -440,9 +481,45 @@
                     },
                     {
                         "data": {
+                            "id": "d7w2awkj09s0",
+                            "created": 1739931674403,
+                            "text": "关键路径"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
                             "id": "max_flow",
                             "created": 1735373766776,
-                            "text": "最大流"
+                            "text": "最大流",
+                            "layout_right_offset": {
+                                "x": 6,
+                                "y": 101
+                            }
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d7w2b2ilqew0",
+                            "created": 1739931687347,
+                            "text": "最小生成树",
+                            "layout_right_offset": {
+                                "x": -4,
+                                "y": -57
+                            }
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d7w2b9hillk0",
+                            "created": 1739931702519,
+                            "text": "二分图",
+                            "layout_right_offset": {
+                                "x": 6,
+                                "y": -63
+                            }
                         },
                         "children": []
                     }
@@ -647,6 +724,14 @@
                             "text": "广度优先搜索"
                         },
                         "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d7w2dluhza80",
+                            "created": 1739931886153,
+                            "text": "启发式搜索"
+                        },
+                        "children": []
                     }
                 ]
             },
@@ -696,6 +781,136 @@
                             "id": "d76ypxui8kw0",
                             "created": 1737382569289,
                             "text": "散列表查找"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d7w2bwxj3qo0",
+                    "created": 1739931753553,
+                    "text": "字符串匹配"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d7w2c1wfucg0",
+                            "created": 1739931764371,
+                            "text": "朴素"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d7w2c5al7oo0",
+                            "created": 1739931771757,
+                            "text": "KMP"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d7w2c9v2z6o0",
+                            "created": 1739931781703,
+                            "text": "Robin-Karp"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d7w2cinljww0",
+                            "created": 1739931800842,
+                            "text": "Boyer-Moore"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d7w2cqpb36g0",
+                            "created": 1739931818359,
+                            "text": "AC自动机"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d7w2cvziwtc0",
+                            "created": 1739931829861,
+                            "text": "Trie"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d7w2d6b3vh40",
+                            "created": 1739931852329,
+                            "text": "后缀数组"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d7w2dwq81uw0",
+                    "created": 1739931909839,
+                    "text": "其他"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d7w2dzgi18g0",
+                            "created": 1739931915782,
+                            "text": "数论"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d7w2e14wgmo0",
+                            "created": 1739931919434,
+                            "text": "计算几何"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d7w2e5tgfpc0",
+                            "created": 1739931929626,
+                            "text": "概率分析"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d7w2ea23t140",
+                            "created": 1739931938856,
+                            "text": "并查集"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d7w2ef3m68w0",
+                            "created": 1739931949831,
+                            "text": "拓扑网络"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d7w2ejqpt400",
+                            "created": 1739931959935,
+                            "text": "矩阵运算"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d7w2enjdk4g0",
+                            "created": 1739931968199,
+                            "text": "线性规划"
                         },
                         "children": []
                     }
