@@ -442,7 +442,8 @@
                         "data": {
                             "id": "storage",
                             "created": 1735373766776,
-                            "text": "图的存储"
+                            "text": "图的存储",
+                            "progress": 9
                         },
                         "children": [
                             {
@@ -713,7 +714,8 @@
                         "data": {
                             "id": "dfs",
                             "created": 1735373766776,
-                            "text": "深度优先搜索"
+                            "text": "深度优先搜索",
+                            "progress": 9
                         },
                         "children": []
                     },
@@ -721,7 +723,8 @@
                         "data": {
                             "id": "bfs",
                             "created": 1735373766776,
-                            "text": "广度优先搜索"
+                            "text": "广度优先搜索",
+                            "progress": 9
                         },
                         "children": []
                     },
@@ -797,7 +800,8 @@
                         "data": {
                             "id": "d7w2c1wfucg0",
                             "created": 1739931764371,
-                            "text": "朴素"
+                            "text": "朴素",
+                            "progress": 9
                         },
                         "children": []
                     },
@@ -805,7 +809,8 @@
                         "data": {
                             "id": "d7w2c5al7oo0",
                             "created": 1739931771757,
-                            "text": "KMP"
+                            "text": "KMP",
+                            "progress": 9
                         },
                         "children": []
                     },
@@ -813,7 +818,8 @@
                         "data": {
                             "id": "d7w2c9v2z6o0",
                             "created": 1739931781703,
-                            "text": "Robin-Karp"
+                            "text": "Robin-Karp",
+                            "progress": 9
                         },
                         "children": []
                     },
@@ -821,7 +827,8 @@
                         "data": {
                             "id": "d7w2cinljww0",
                             "created": 1739931800842,
-                            "text": "Boyer-Moore"
+                            "text": "Boyer-Moore",
+                            "progress": 9
                         },
                         "children": []
                     },
@@ -837,7 +844,8 @@
                         "data": {
                             "id": "d7w2cvziwtc0",
                             "created": 1739931829861,
-                            "text": "Trie"
+                            "text": "Trie",
+                            "progress": 9
                         },
                         "children": []
                     },
