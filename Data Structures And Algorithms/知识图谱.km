@@ -836,7 +836,8 @@
                         "data": {
                             "id": "d7w2cqpb36g0",
                             "created": 1739931818359,
-                            "text": "AC自动机"
+                            "text": "AC自动机",
+                            "progress": 9
                         },
                         "children": []
                     },
@@ -919,6 +920,57 @@
                             "id": "d7w2enjdk4g0",
                             "created": 1739931968199,
                             "text": "线性规划"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d84nqnnj7pc0",
+                    "created": 1740804631781,
+                    "text": "基本算法思想"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d84nqvd5o6w0",
+                            "created": 1740804648568,
+                            "text": "贪心算法",
+                            "progress": 9
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d84nr34zxsw0",
+                            "created": 1740804665489,
+                            "text": "分治算法",
+                            "progress": 9
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d84nr7d0eqw0",
+                            "created": 1740804674681,
+                            "text": "动态规划"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d84nrafc74g0",
+                            "created": 1740804681352,
+                            "text": "回溯算法"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d84nrfv6id40",
+                            "created": 1740804693194,
+                            "text": "枚举算法"
                         },
                         "children": []
                     }
