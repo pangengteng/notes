@@ -954,7 +954,8 @@
                         "data": {
                             "id": "d84nr7d0eqw0",
                             "created": 1740804674681,
-                            "text": "动态规划"
+                            "text": "动态规划",
+                            "progress": 9
                         },
                         "children": []
                     },
@@ -962,7 +963,8 @@
                         "data": {
                             "id": "d84nrafc74g0",
                             "created": 1740804681352,
-                            "text": "回溯算法"
+                            "text": "回溯算法",
+                            "progress": 9
                         },
                         "children": []
                     },
