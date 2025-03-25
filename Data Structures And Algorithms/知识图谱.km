@@ -476,7 +476,8 @@
                         "data": {
                             "id": "shortest_path",
                             "created": 1735373766776,
-                            "text": "最短路径"
+                            "text": "最短路径",
+                            "progress": 9
                         },
                         "children": []
                     },
@@ -662,7 +663,7 @@
                                     "id": "d71gkpxczog0",
                                     "created": 1736823580465,
                                     "text": "堆排序",
-                                    "progress": 1
+                                    "progress": null
                                 },
                                 "children": []
                             }
@@ -734,7 +735,49 @@
                             "created": 1739931886153,
                             "text": "启发式搜索"
                         },
-                        "children": []
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d8oe6mbul5s0",
+                                    "created": 1742808870759,
+                                    "text": "A*",
+                                    "progress": 9
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d8oe6om39ag0",
+                                    "created": 1742808875732,
+                                    "text": "IDA*"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d8oe6x6xrew0",
+                                    "created": 1742808894407,
+                                    "text": "蚁群算法"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d8oe74g27vc0",
+                                    "created": 1742808910196,
+                                    "text": "遗传算法"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d8oe76woi7k0",
+                                    "created": 1742808915554,
+                                    "text": "模拟退火算法"
+                                },
+                                "children": []
+                            }
+                        ]
                     }
                 ]
             },
@@ -775,7 +818,8 @@
                         "data": {
                             "id": "d76ypsx4vpk0",
                             "created": 1737382558564,
-                            "text": "树结构查找"
+                            "text": "树结构查找",
+                            "progress": 9
                         },
                         "children": []
                     },
@@ -783,7 +827,8 @@
                         "data": {
                             "id": "d76ypxui8kw0",
                             "created": 1737382569289,
-                            "text": "散列表查找"
+                            "text": "散列表查找",
+                            "progress": 9
                         },
                         "children": []
                     }
