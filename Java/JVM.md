@@ -42,7 +42,7 @@
 >
 >> a. 堆（GC堆）：存储对象，数组。包括年轻代（Eden + S0 + S1），老年代
 >> b. 栈：方法入参，局部变量
->> c. MetaSpace：方法区
+>> c. MetaSpace：方法区（类信息：类名，字段，方法等），常量池
 >> d. CCS（compressed class space）：存类信息
 >> e. code cache：存JIT编译后的本地代码
 >>
