@@ -15,99 +15,48 @@
                 "children": [
                     {
                         "data": {
-                            "id": "d2qrqxi9ovs0",
-                            "created": 1721113306077,
-                            "text": "GC"
+                            "id": "db5gos90a7k0",
+                            "created": 1751854772566,
+                            "text": "JDK、JRE、JVM 的关系"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "db5gp3xz0w00",
+                            "created": 1751854798020,
+                            "text": "字节码"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "db5gv4a91nk0",
+                            "created": 1751855268948,
+                            "text": "类加载"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "db5gv7kaie80",
+                            "created": 1751855276085,
+                            "text": "JMM"
                         },
                         "children": [
                             {
                                 "data": {
-                                    "id": "d6mc0qk2kl40",
-                                    "created": 1735287330765,
-                                    "text": "Old Generation",
-                                    "layout_right_offset": {
-                                        "x": 3,
-                                        "y": 191
-                                    }
+                                    "id": "db5gwj37qo00",
+                                    "created": 1751855379538,
+                                    "text": "内存结构"
                                 },
-                                "children": [
-                                    {
-                                        "data": {
-                                            "id": "d6mc1anyt680",
-                                            "created": 1735287374536,
-                                            "text": "Serial Old",
-                                            "layout_right_offset": {
-                                                "x": -7,
-                                                "y": 11
-                                            }
-                                        },
-                                        "children": []
-                                    },
-                                    {
-                                        "data": {
-                                            "id": "d6mc1gid7js0",
-                                            "created": 1735287387258,
-                                            "text": "Parallel Old",
-                                            "layout_right_offset": {
-                                                "x": 0,
-                                                "y": 13
-                                            }
-                                        },
-                                        "children": []
-                                    },
-                                    {
-                                        "data": {
-                                            "id": "d6mc1wo9mqw0",
-                                            "created": 1735287422444,
-                                            "text": "CMS"
-                                        },
-                                        "children": []
-                                    }
-                                ]
+                                "children": []
                             },
                             {
                                 "data": {
-                                    "id": "d6mc0rkz0800",
-                                    "created": 1735287332996,
-                                    "text": "Young Generation",
-                                    "expandState": "expand",
-                                    "layout_right_offset": {
-                                        "x": -9,
-                                        "y": -91
-                                    }
-                                },
-                                "children": [
-                                    {
-                                        "data": {
-                                            "id": "d6mbq8x17oo0",
-                                            "created": 1735286508725,
-                                            "text": "Serial"
-                                        },
-                                        "children": []
-                                    },
-                                    {
-                                        "data": {
-                                            "id": "d6mbzhshnw80",
-                                            "created": 1735287233319,
-                                            "text": "ParNew"
-                                        },
-                                        "children": []
-                                    },
-                                    {
-                                        "data": {
-                                            "id": "d6mc0d31zkw0",
-                                            "created": 1735287301438,
-                                            "text": "Parallel Scavenge"
-                                        },
-                                        "children": []
-                                    }
-                                ]
-                            },
-                            {
-                                "data": {
-                                    "id": "d6mc2alvse80",
-                                    "created": 1735287452774,
-                                    "text": "G1"
+                                    "id": "db5gwmnsykw0",
+                                    "created": 1751855387313,
+                                    "text": "可见性、有序性（并发编程）"
                                 },
                                 "children": []
                             }
@@ -115,17 +64,100 @@
                     },
                     {
                         "data": {
-                            "id": "d2qrr2w3ycg0",
-                            "created": 1721113317798,
-                            "text": "内存泄露"
+                            "id": "db5gyusv2u80",
+                            "created": 1751855561762,
+                            "text": "GC"
                         },
-                        "children": []
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "db5gywc08bs0",
+                                    "created": 1751855565096,
+                                    "text": "算法"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "db5gz6r2eu80",
+                                            "created": 1751855587775,
+                                            "text": "标记-复制"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "db5h04whui80",
+                                            "created": 1751855662113,
+                                            "text": "标记-清除"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "db5h08wkkc80",
+                                            "created": 1751855670825,
+                                            "text": "标记-清除-整理"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "db5gyyy29io0",
+                                    "created": 1751855570783,
+                                    "text": "垃圾回收器"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "db5h0p1eoa80",
+                                            "created": 1751855705946,
+                                            "text": "Serial GC"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "db5h0t6v12g0",
+                                            "created": 1751855714983,
+                                            "text": "Parallel GC"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "db5h11060mo0",
+                                            "created": 1751855731992,
+                                            "text": "CMS"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "db5h166lae80",
+                                            "created": 1751855743265,
+                                            "text": "G1"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "db5h1vyqhu00",
+                                            "created": 1751855799386,
+                                            "text": "ZGC"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "data": {
-                            "id": "d2qrrzjxnds0",
-                            "created": 1721113388895,
-                            "text": "内存溢出"
+                            "id": "db5h26wtsc80",
+                            "created": 1751855823215,
+                            "text": "启动命令 & 内置命令行工具"
                         },
                         "children": []
                     }
@@ -463,6 +495,509 @@
                     "text": "xxl-job"
                 },
                 "children": []
+            },
+            {
+                "data": {
+                    "id": "db5m3mtwe0o0",
+                    "created": 1751870041781,
+                    "text": "并发编程",
+                    "layout_mind_offset": {
+                        "x": 102,
+                        "y": 31
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "db5metz0u5c0",
+                            "created": 1751870919334,
+                            "text": "衡量性能指标"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "db5mf6oq76w0",
+                                    "created": 1751870947009,
+                                    "text": "吞吐量"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "db5mfd0ynyo0",
+                                    "created": 1751870960810,
+                                    "text": "延迟"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "db5mraroqw00",
+                            "created": 1751871896265,
+                            "text": "三个问题"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "db5mrdbq4rk0",
+                                    "created": 1751871901831,
+                                    "text": "可见性"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "db5mrkdcbso0",
+                                    "created": 1751871917166,
+                                    "text": "有序性"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "db5mrnrzufk0",
+                                    "created": 1751871924582,
+                                    "text": "原子性"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "db5mtaiyypk0",
+                                    "created": 1751872052467,
+                                    "text": "解决方法"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "db5mtea31jc0",
+                                            "created": 1751872060636,
+                                            "text": "可见性/有序性：Happens- Before原则，final属性"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "db5mu5w8d3c0",
+                                            "created": 1751872120749,
+                                            "text": "原子性：锁"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "db5muphi36o0",
+                            "created": 1751872163395,
+                            "text": "管程"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "db5muxabjo80",
+                                    "created": 1751872180374,
+                                    "text": "Hasen、Hoare、MSEA 三种模型"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "db5mvf72hso0",
+                                    "created": 1751872219359,
+                                    "text": "synchronized"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "db5mvk2zzv40",
+                                    "created": 1751872229997,
+                                    "text": "Lock"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "db5mvq39f8o0",
+                            "created": 1751872243074,
+                            "text": "系统线程 & Java 线程"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "db5mw42n1aw0",
+                                    "created": 1751872273511,
+                                    "text": "线程数量设置成多少才合理"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "db5mz7yom1s0",
+                            "created": 1751872517071,
+                            "text": "JUC 包"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "db5mzage4kg0",
+                                    "created": 1751872522496,
+                                    "text": "Lock"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "db5mzi64mn40",
+                                    "created": 1751872539289,
+                                    "text": "Semaphore"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "db5mzoujwd40",
+                                    "created": 1751872553827,
+                                    "text": "ReadWriteLock"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "db5n1z2kens0",
+                                    "created": 1751872732808,
+                                    "text": "StampLock"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "db5n2e13ikg0",
+                                    "created": 1751872765371,
+                                    "text": "CountDownLatch"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "db5n2jkgy400",
+                                    "created": 1751872777426,
+                                    "text": "CyclicBarrier"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "db5n2rb2ixk0",
+                            "created": 1751872794272,
+                            "text": "线程安全容器"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "db5n32yatts0",
+                                    "created": 1751872819621,
+                                    "text": "List"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "db5n34y8ngg0",
+                                            "created": 1751872823971,
+                                            "text": "CopyOnWriteArrayList"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "db5n3f3077c0",
+                                    "created": 1751872846027,
+                                    "text": "Map"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "db5n3ixra540",
+                                            "created": 1751872854417,
+                                            "text": "ConcurrentHashMap"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "db5n3pi4p9c0",
+                                            "created": 1751872868709,
+                                            "text": "ConcurrentSkipListMap"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "db5n3h2ipnk0",
+                                    "created": 1751872850351,
+                                    "text": "Set"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "db5n4mssnds0",
+                                            "created": 1751872941188,
+                                            "text": "ConcurrentSkipLIstSet"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "db5n4rj4kyg0",
+                                            "created": 1751872951487,
+                                            "text": "CopyOnWriteArraySet"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "db5n3zskrt40",
+                                    "created": 1751872891109,
+                                    "text": "Queue"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "db5n5ahzv400",
+                                            "created": 1751872992778,
+                                            "text": "BlockingQueue"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "db5n5jbvdh40",
+                                                    "created": 1751873011998,
+                                                    "text": "ArrayBlockingQueue"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "db5n5p2it940",
+                                                    "created": 1751873024494,
+                                                    "text": "LinkedBlockingQUeue"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "db5n5d9e0600",
+                                            "created": 1751872998788,
+                                            "text": "BlockingDeque"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "db5n5xldqfc0",
+                                            "created": 1751873043048,
+                                            "text": "ConcurrentLinkedQueue"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "db5n66ky16o0",
+                                            "created": 1751873062613,
+                                            "text": "ConcurrentLinkedDeque"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "db5n6fqle1k0",
+                            "created": 1751873082547,
+                            "text": "原子类"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "db5n6pa15lc0",
+                            "created": 1751873103312,
+                            "text": "异步编程"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "db5n78un5t40",
+                                    "created": 1751873145917,
+                                    "text": "CompletionFuture"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "db5nfxjyd0g0",
+                                    "created": 1751873826604,
+                                    "text": "CompletionService"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "db5ngfffzgw0",
+                                    "created": 1751873865513,
+                                    "text": "Fork/Join"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "db5nhzxx5wg0",
+                            "created": 1751873988530,
+                            "text": "并发设计模式"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "db5ni6py8yg0",
+                                    "created": 1751874003286,
+                                    "text": "避免共享"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "db5nime1lps0",
+                                            "created": 1751874037394,
+                                            "text": "Immutability"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "db5nj3recbs0",
+                                            "created": 1751874075207,
+                                            "text": "CopyOnWrite"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "db5nj7aijfk0",
+                                            "created": 1751874082893,
+                                            "text": "ThreadLocal"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "db5ni9vc04o0",
+                                    "created": 1751874010141,
+                                    "text": "多线程版本的if"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "db5njg8oay80",
+                                            "created": 1751874102373,
+                                            "text": "Guarded Suspension"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "db5njmcxisg0",
+                                            "created": 1751874115691,
+                                            "text": "Balking"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "db5nier9wf40",
+                                    "created": 1751874020780,
+                                    "text": "分工模式"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "db5njvvtt7s0",
+                                            "created": 1751874136425,
+                                            "text": "Thread-Per-Message"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "db5njzecygg0",
+                                            "created": 1751874144076,
+                                            "text": "Worker Thread"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "db5nk47cag00",
+                                    "created": 1751874154535,
+                                    "text": "生产者-消费者模式"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "db5nkl90mjs0",
+                            "created": 1751874191642,
+                            "text": "并发模型"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "db5nkpry8co0",
+                                    "created": 1751874201494,
+                                    "text": "Reactor"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "db5nktdkdbs0",
+                                    "created": 1751874209331,
+                                    "text": "STM"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },

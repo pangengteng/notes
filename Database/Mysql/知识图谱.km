@@ -1,0 +1,39 @@
+{
+    "root": {
+        "data": {
+            "id": "db338zx73g00",
+            "created": 1751613741097,
+            "text": "Mysql"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "db3392yds4o0",
+                    "created": 1751613747699,
+                    "text": "整体框架"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "db33976ri000",
+                            "created": 1751613756913,
+                            "text": "server 层"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "db339at2tc80",
+                            "created": 1751613764793,
+                            "text": "存储引擎层"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

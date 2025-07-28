@@ -415,7 +415,8 @@
                                 "data": {
                                     "id": "d7lv7qdp8o00",
                                     "created": 1738896078501,
-                                    "text": "树状数组"
+                                    "text": "树状数组",
+                                    "progress": 9
                                 },
                                 "children": []
                             },
@@ -941,7 +942,8 @@
                         "data": {
                             "id": "d7w2ea23t140",
                             "created": 1739931938856,
-                            "text": "并查集"
+                            "text": "并查集",
+                            "progress": 9
                         },
                         "children": []
                     },
