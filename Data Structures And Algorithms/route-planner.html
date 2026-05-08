@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>路径规划</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    color: #111827;
+    background: #f8f9fb;
+    overflow: hidden;
+  }
+
+  .app { display: flex; height: 100vh; }
+
+  .sidebar {
+    width: 400px;
+    background: white;
+    padding: 24px;
+    overflow-y: auto;
+    border-right: 1px solid #e5e7eb;
+    flex-shrink: 0;
+  }
+
+  .map-container { flex: 1; position: relative; }
+  #map { width: 100%; height: 100%; background: #e5e7eb; }
+
+  .header { margin-bottom: 24px; }
+  h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; }
+  .subtitle { color: #6b7280; font-size: 13px; margin-top: 4px; }
+
+  .field { margin-bottom: 20px; }
+  .label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6b7280;
+    margin-bottom: 8px;
+  }
+  .hint { font-size: 12px; color: #9ca3af; margin-top: 6px; }
+
+  .coords-input, .order-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    background: #fafafa;
+    transition: all 0.15s;
+  }
+  .coords-input { height: 120px; resize: vertical; }
+  .order-input { height: auto; }
+  .coords-input:focus, .order-input:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+
+  .mode-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    background: #f3f4f6;
+    padding: 4px;
+    border-radius: 10px;
+  }
+  .mode-btn {
+    padding: 10px 8px;
+    border: none;
+    background: transparent;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    color: #6b7280;
+    transition: all 0.15s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .mode-btn:hover { color: #111827; }
+  .mode-btn.active {
+    background: white;
+    color: #111827;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .mode-icon { font-size: 18px; }
+
+  .submit-btn {
+    width: 100%;
+    padding: 13px;
+    background: #111827;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .submit-btn:hover:not(:disabled) { background: #1f2937; transform: translateY(-1px); }
+  .submit-btn:active:not(:disabled) { transform: translateY(0); }
+  .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  .stats {
+    margin-top: 24px;
+    padding: 16px;
+    background: linear-gradient(135deg, #eff6ff, #f0fdfa);
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+    display: none;
+  }
+  .stats-header {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #2563eb;
+    margin-bottom: 10px;
+  }
+  .stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 6px 0;
+  }
+  .stat-label { font-size: 13px; color: #6b7280; }
+  .stat-value { font-size: 15px; font-weight: 600; color: #111827; }
+
+  .segments {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #dbeafe;
+  }
+  .segments-title {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 8px;
+  }
+  .segment {
+    padding: 8px 10px;
+    background: white;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .segment-route {
+    font-weight: 600;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .segment-orig { font-size: 11px; color: #9ca3af; font-weight: 500; }
+  .segment-arrow { color: #9ca3af; }
+  .segment-info { color: #6b7280; }
+
+  .error {
+    margin-top: 12px;
+    padding: 12px 14px;
+    background: #fef2f2;
+    color: #991b1b;
+    border-radius: 8px;
+    font-size: 13px;
+    display: none;
+    border-left: 3px solid #dc2626;
+  }
+
+  .numbered-marker { background: transparent !important; border: none !important; }
+  .marker-pin {
+    min-width: 32px;
+    height: 32px;
+    padding: 0 9px;
+    background: #2563eb;
+    color: white;
+    border-radius: 16px;
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    white-space: nowrap;
+  }
+  .marker-pin.start { background: #10b981; }
+  .marker-pin.end { background: #ef4444; }
+  .marker-pin.loop {
+    background: linear-gradient(135deg, #10b981 0%, #10b981 50%, #ef4444 50%, #ef4444 100%);
+  }
+  .marker-pin.revisit { background: #8b5cf6; }
+
+  @media (max-width: 768px) {
+    .app { flex-direction: column; }
+    .sidebar {
+      width: 100%;
+      max-height: 55vh;
+      border-right: none;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .map-container { min-height: 45vh; }
+  }
+
+  .spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="header">
+      <h1>路径规划</h1>
+      <p class="subtitle">输入坐标和访问顺序，查看真实路径</p>
+    </div>
+
+    <div class="field">
+      <label class="label" for="coords">坐标列表</label>
+      <textarea id="coords" class="coords-input" spellcheck="false" placeholder="格式：(lat1,lng1),(lat2,lng2),...">(39.9055,116.3976),(39.9163,116.3972),(39.9252,116.3883),(39.9405,116.3902)</textarea>
+      <div class="hint">格式：(lat,lng) 之间用逗号分隔，至少 2 个点</div>
+    </div>
+
+    <div class="field">
+      <label class="label" for="order">访问顺序（可选）</label>
+      <input id="order" class="order-input" spellcheck="false" placeholder="例如：0,2,1,3 （留空则按原顺序）" value="0,2,1,3">
+      <div class="hint">下标从 0 开始，如 <code>0,2,1,3</code> 表示按 0→2→1→3 的顺序访问</div>
+    </div>
+
+    <div class="field">
+      <label class="label">出行方式</label>
+      <div class="mode-group" role="tablist">
+        <button class="mode-btn active" data-mode="driving">
+          <span class="mode-icon">🚗</span>
+          <span>开车</span>
+        </button>
+        <button class="mode-btn" data-mode="cycling">
+          <span class="mode-icon">🚴</span>
+          <span>骑车</span>
+        </button>
+        <button class="mode-btn" data-mode="walking">
+          <span class="mode-icon">🚶</span>
+          <span>步行</span>
+        </button>
+      </div>
+    </div>
+
+    <button id="submit" class="submit-btn">显示路线</button>
+
+    <div id="error" class="error"></div>
+
+    <div id="stats" class="stats">
+      <div class="stats-header">路线概览</div>
+      <div class="stat-row">
+        <span class="stat-label">总距离</span>
+        <span class="stat-value" id="total-distance">—</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">预计用时</span>
+        <span class="stat-value" id="total-duration">—</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">途经点数</span>
+        <span class="stat-value" id="total-points">—</span>
+      </div>
+      <div class="segments">
+        <div class="segments-title">分段明细</div>
+        <div id="segments"></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="map-container">
+    <div id="map"></div>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+  // 用与 Python (/table) 相同的服务器，确保 OSM 数据版本一致
+  const ENDPOINTS = {
+    driving: 'https://router.project-osrm.org/route/v1/driving',
+    cycling: 'https://routing.openstreetmap.de/routed-bike/route/v1/driving',
+    walking: 'https://routing.openstreetmap.de/routed-foot/route/v1/driving'
+  };
+
+  let currentMode = 'driving';
+  let map, routeLayer, markersLayer;
+
+  function initMap() {
+    map = L.map('map', { zoomControl: true }).setView([39.92, 116.40], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    routeLayer = L.layerGroup().addTo(map);
+    markersLayer = L.layerGroup().addTo(map);
+  }
+
+  // Parse coords in format: (lat1,lng1),(lat2,lng2),...
+  function parseCoords(text) {
+    const regex = /\(\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*\)/g;
+    const coords = [];
+    let match;
+    while ((match = regex.exec(text)) !== null) {
+      const lat = parseFloat(match[1]);
+      const lng = parseFloat(match[2]);
+      const idx = coords.length;
+      if (lat < -90 || lat > 90) {
+        throw new Error(`第 ${idx + 1} 个坐标 (下标 ${idx}) 的纬度 ${lat} 超出范围 (-90 ~ 90)`);
+      }
+      if (lng < -180 || lng > 180) {
+        throw new Error(`第 ${idx + 1} 个坐标 (下标 ${idx}) 的经度 ${lng} 超出范围 (-180 ~ 180)`);
+      }
+      coords.push({ lat, lng });
+    }
+    if (coords.length < 2) {
+      throw new Error('请输入至少 2 个坐标点，格式：(lat,lng),(lat,lng),...');
+    }
+    return coords;
+  }
+
+  // Parse access order: "0,2,1,3" → [0,2,1,3]. Empty → natural order.
+  function parseOrder(text, n) {
+    const trimmed = text.trim();
+    if (!trimmed) return Array.from({ length: n }, (_, i) => i);
+    const parts = trimmed.split(',').map(p => p.trim()).filter(Boolean);
+    if (parts.length < 2) {
+      throw new Error('访问顺序至少要包含 2 个下标');
+    }
+    const order = [];
+    for (let i = 0; i < parts.length; i++) {
+      const idx = parseInt(parts[i], 10);
+      if (isNaN(idx) || String(idx) !== parts[i]) {
+        throw new Error(`访问顺序第 ${i + 1} 项 "${parts[i]}" 不是有效整数`);
+      }
+      if (idx < 0 || idx >= n) {
+        throw new Error(`访问顺序第 ${i + 1} 项 (${idx}) 超出范围，下标应在 0 ~ ${n - 1} 之间`);
+      }
+      order.push(idx);
+    }
+    return order;
+  }
+
+  function makeMarkerIcon(label, type) {
+    const labelStr = String(label);
+    // Approximate width: ~8px per char + 16px padding/border, min 32 for circle
+    const width = Math.max(32, Math.ceil(labelStr.length * 8 + 16));
+    return L.divIcon({
+      className: 'numbered-marker',
+      html: `<div class="marker-pin ${type || ''}">${labelStr}</div>`,
+      iconSize: [width, 32],
+      iconAnchor: [width / 2, 16]
+    });
+  }
+
+  // Render markers, consolidating revisits at the same original index
+  function renderMarkers(allCoords, order) {
+    const totalVisits = order.length;
+    const visitsByOrigIdx = new Map();
+    order.forEach((origIdx, i) => {
+      if (!visitsByOrigIdx.has(origIdx)) visitsByOrigIdx.set(origIdx, []);
+      visitsByOrigIdx.get(origIdx).push(i + 1);
+    });
+
+    visitsByOrigIdx.forEach((visitNums, origIdx) => {
+      const c = allCoords[origIdx];
+      const isStart = visitNums.includes(1);
+      const isEnd = visitNums.includes(totalVisits);
+
+      let type = '';
+      if (isStart && isEnd) type = 'loop';
+      else if (isStart) type = 'start';
+      else if (isEnd) type = 'end';
+      else if (visitNums.length > 1) type = 'revisit';
+
+      const label = visitNums.join('·');
+
+      let title;
+      if (isStart && isEnd) title = `🏁 起点 · 终点（第 ${visitNums.join(' / 第 ')} 次访问）`;
+      else if (isStart) title = '🟢 起点（第 1 次访问）';
+      else if (isEnd) title = `🔴 终点（第 ${totalVisits} 次访问）`;
+      else if (visitNums.length > 1) title = `🟣 重访点（第 ${visitNums.join(' / 第 ')} 次访问）`;
+      else title = `第 ${visitNums[0]} 次访问`;
+
+      const popup = `<b>${title}</b><br>原始下标：${origIdx}<br>坐标：${c.lat.toFixed(5)}, ${c.lng.toFixed(5)}`;
+
+      L.marker([c.lat, c.lng], { icon: makeMarkerIcon(label, type) })
+        .bindPopup(popup)
+        .addTo(markersLayer);
+    });
+  }
+
+  async function getRoute(coords, mode) {
+    const coordStr = coords.map(c => `${c.lng},${c.lat}`).join(';');
+    // continue_straight=false: 取消"途经点禁止掉头"约束，让总距离 = 两两最短距离之和
+    // 这样结果会与 Python 中 /table 距离矩阵的求和一致
+    const url = `${ENDPOINTS[mode]}/${coordStr}?overview=full&geometries=geojson&steps=false&continue_straight=false`;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`路由服务异常 (${res.status})，请稍后重试`);
+    const data = await res.json();
+    if (data.code !== 'Ok') {
+      const msgMap = {
+        'NoRoute': '无法在这些点之间规划路线，请检查坐标是否合理',
+        'InvalidQuery': '请求格式有误',
+        'InvalidValue': '坐标值无效'
+      };
+      throw new Error(msgMap[data.code] || data.message || '路径规划失败');
+    }
+    return data.routes[0];
+  }
+
+  function formatDistance(m) {
+    if (m < 1000) return `${Math.round(m)} 米`;
+    return `${(m / 1000).toFixed(2)} 公里`;
+  }
+  function formatDuration(s) {
+    s = Math.round(s);
+    if (s < 60) return `${s} 秒`;
+    const h = Math.floor(s / 3600);
+    const min = Math.round((s % 3600) / 60);
+    if (h > 0) return `${h} 小时 ${min} 分钟`;
+    return `${min} 分钟`;
+  }
+
+  function showError(msg) {
+    const el = document.getElementById('error');
+    el.textContent = msg;
+    el.style.display = 'block';
+  }
+  function hideError() {
+    document.getElementById('error').style.display = 'none';
+  }
+
+  async function showRoute() {
+    const coordsText = document.getElementById('coords').value;
+    const orderText = document.getElementById('order').value;
+    const btn = document.getElementById('submit');
+    const statsEl = document.getElementById('stats');
+
+    hideError();
+    statsEl.style.display = 'none';
+
+    let allCoords, order, orderedCoords;
+    try {
+      allCoords = parseCoords(coordsText);
+      order = parseOrder(orderText, allCoords.length);
+      orderedCoords = order.map(i => allCoords[i]);
+    } catch (e) {
+      showError(e.message);
+      return;
+    }
+
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner"></span>规划中...';
+
+    try {
+      const route = await getRoute(orderedCoords, currentMode);
+
+      routeLayer.clearLayers();
+      markersLayer.clearLayers();
+
+      // Draw route polyline (geometry is [lng, lat])
+      const geom = route.geometry.coordinates.map(c => [c[1], c[0]]);
+      L.polyline(geom, {
+        color: '#2563eb',
+        weight: 5,
+        opacity: 0.85,
+        lineJoin: 'round',
+        lineCap: 'round'
+      }).addTo(routeLayer);
+
+      // Render markers (consolidates revisits / closed loops)
+      renderMarkers(allCoords, order);
+
+      const bounds = L.latLngBounds(geom);
+      map.fitBounds(bounds, { padding: [50, 50] });
+
+      document.getElementById('total-distance').textContent = formatDistance(route.distance);
+      document.getElementById('total-duration').textContent = formatDuration(route.duration);
+      document.getElementById('total-points').textContent = `${orderedCoords.length} 个`;
+
+      const segEl = document.getElementById('segments');
+      segEl.innerHTML = '';
+      route.legs.forEach((leg, i) => {
+        const fromOrig = order[i];
+        const toOrig = order[i + 1];
+        const div = document.createElement('div');
+        div.className = 'segment';
+        div.innerHTML = `
+          <span class="segment-route">
+            ${i + 1} <span class="segment-arrow">→</span> ${i + 2}
+            <span class="segment-orig">(原 ${fromOrig}→${toOrig})</span>
+          </span>
+          <span class="segment-info">${formatDistance(leg.distance)} · ${formatDuration(leg.duration)}</span>
+        `;
+        segEl.appendChild(div);
+      });
+
+      statsEl.style.display = 'block';
+    } catch (e) {
+      showError(e.message);
+      // Show markers even if routing fails
+      markersLayer.clearLayers();
+      routeLayer.clearLayers();
+      renderMarkers(allCoords, order);
+      const bounds = L.latLngBounds(orderedCoords.map(c => [c.lat, c.lng]));
+      map.fitBounds(bounds, { padding: [50, 50] });
+    } finally {
+      btn.disabled = false;
+      btn.textContent = '显示路线';
+    }
+  }
+
+  document.querySelectorAll('.mode-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentMode = btn.dataset.mode;
+    });
+  });
+
+  document.getElementById('submit').addEventListener('click', showRoute);
+
+  document.getElementById('coords').addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+      e.preventDefault();
+      showRoute();
+    }
+  });
+  document.getElementById('order').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      showRoute();
+    }
+  });
+
+  initMap();
+  setTimeout(showRoute, 300);
+</script>
+</body>
+</html>
